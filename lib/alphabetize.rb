@@ -1,3 +1,8 @@
+require 'pry'
 def alphabetize(arr)
-  # code here
+  alphabets = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+
+  arr.sort_by do |word|
+    word.each_char.map {|char| alphabets.index(char)}
+  end
 end
